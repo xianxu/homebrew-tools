@@ -8,9 +8,19 @@ A dictionary that remembers what you looked up, asks you about it later, and
 answers questions a dictionary cannot.
 
 ```sh
+brew trust xianxu/tools          # third-party taps are untrusted by default
 brew tap xianxu/tools
-brew install define
+brew install xianxu/tools/define
 ```
+
+**Both of those lines are load-bearing.** Homebrew refuses to load formulae from
+an untrusted tap and reports it as `invalid syntax in tap!`, which is not what it
+sounds like. And `brew install define` gets a DIFFERENT program — `define` also
+exists in homebrew-core (Rican7's dictionary client) — so the fully qualified
+name is the one that installs this one.
+
+If you have both, they collide on `PATH` and `brew` will tell you which is
+winning.
 
 Then just look a word up:
 
