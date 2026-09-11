@@ -1,8 +1,8 @@
 class Define < Formula
   desc "Dictionary that remembers what you looked up, and asks you about it later"
   homepage "https://github.com/xianxu/tools"
-  url "https://github.com/xianxu/tools/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "75465812abea5ac65283d0572255c95e98ffcd80f9305cdfa9045465ca6800b1"
+  url "https://github.com/xianxu/tools/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "e368058b7e4bea638158d47b26fd50a0f310ddd0a78176b5f15e7e0bd09e1cc8"
   license "Apache-2.0"
 
   # macOS only, and not incidentally: definitions and IPA come from

@@ -30,6 +30,10 @@ define sycophantic
 
 The word joins a deck kept in whatever directory you ran it from — the directory
 *is* the deck, so a project folder and a reading folder keep separate vocabularies.
+Because of that, `define` **asks before making a new directory into a deck**;
+declining still answers the lookup and writes nothing. With no terminal to ask —
+a script, a pipe, CI — it creates nothing, so automation that wants a deck passes
+`--here`.
 `define --play` reviews what is due; `define --stats` says whether any of it is
 working.
 
