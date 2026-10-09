@@ -44,3 +44,25 @@ first fetch. The formula therefore depends on nothing but Go at build time.
 
 The model-backed features (`--harvest`, `--reflect`, free-form questions) need an
 API key in the environment; everything else works offline.
+
+## castcut
+
+Record, annotate and cut captioned terminal demos: record a take with asciinema,
+stamp captions in a browser viewer, and cut it into a short demo that plays fast
+between captions and in real time around them.
+
+```sh
+brew trust xianxu/tools
+brew tap xianxu/tools
+brew install xianxu/tools/castcut
+```
+
+```sh
+castcut record -- ./my-app --demo          # → recordings/take-01.cast, at the window's size
+castcut annotate recordings/take-01.cast   # Alt+T stamps; notes → take-01.captions.txt
+castcut cut recordings/take-01.cast        # → recordings/take-01-cut.cast
+```
+
+`castcut --help` is the manual: the flow, the timing flags, the `captions`
+header contract and how to embed a cut. Depends on `asciinema` (installed with
+it); annotate's page loads asciinema-player from jsDelivr.
